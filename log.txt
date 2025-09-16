@@ -1,0 +1,93 @@
+~
+→ cd projects/edu
+
+~/projects/edu
+→ ls
+
+~/projects/edu
+→ git clone git@github.com:denys-ko/softwareDevelopmentTechLog.git
+Клонування в "softwareDevelopmentTechLog"..
+remote: Enumerating objects: 452, done.
+remote: Counting objects: 100% (161/161), done.
+remote: Compressing objects: 100% (51/51), done.
+remote: Total 452 (delta 132), reused 125 (delta 110), pack-reused 291 (from 1)
+Отримання об’єктів: 100% (452/452), 61.63 КіБ | 643.00 КіБ/с, готово.
+Розв’язання дельт: 100% (228/228), готово.
+
+~/projects/edu
+→ cd softwareDevelopmentTechLog 
+
+~/projects/edu/softwareDevelopmentTechLog main
+→ git status
+На гілці main
+Ваша гілка не відрізняється від "origin/main".
+
+нічого комітити, робоче дерево чисте
+
+~/projects/edu/softwareDevelopmentTechLog main
+→ vi im32.txt
+
+~/projects/edu/softwareDevelopmentTechLog main*
+→ git status
+На гілці main
+Ваша гілка не відрізняється від "origin/main".
+
+Невідстежувані файли:
+  (скористайтесь "git add <файл>...", щоб додати до майбутнього коміту)
+	im32.txt
+
+нічого не додано до коміту, але є невідстежувані файли (скористайтесь "git add" для відстежування)
+
+~/projects/edu/softwareDevelopmentTechLog main*
+→ git add im32.txt
+
+~/projects/edu/softwareDevelopmentTechLog main*
+→ git status
+На гілці main
+Ваша гілка не відрізняється від "origin/main".
+
+Зміни, додані до майбутнього коміту:
+  (використовуйте "git restore --staged <файл>...", щоб видалити з індексу)
+	новий файл:    im32.txt
+
+
+~/projects/edu/softwareDevelopmentTechLog main*
+→ git diff --cached
+diff --git a/im32.txt b/im32.txt
+new file mode 100644
+index 0000000..ce3d5f9
+--- /dev/null
++++ b/im32.txt
+@@ -0,0 +1,6 @@
++// ================================================
++Number:      25
++First Name:  Vitalii
++Last Name:   Chyhryn
++YouTubeLink: https://www.youtube.com/watch?v=T5-faDLv1Vs
++// ================================================
+
+~/projects/edu/softwareDevelopmentTechLog main*
+→ git commit -m "Add IM-32 file and Chyhryn Vitalii's record"
+[main 48c32cd] Add IM-32 file and Chyhryn Vitalii's record
+ 1 file changed, 6 insertions(+)
+ create mode 100644 im32.txt
+
+~/projects/edu/softwareDevelopmentTechLog main ⇡
+→ git log -1
+commit 48c32cd89c7e4f5511d5fecc12754c218278919b (HEAD -> main)
+Author: Vitalii Chyhryn <chyhryn.vitalii+edu@gmail.com>
+Date:   Mon Sep 15 19:17:44 2025 +0300
+
+    Add IM-32 file and Chyhryn Vitalii's record
+
+~/projects/edu/softwareDevelopmentTechLog main ⇡
+→ git push
+Перерахування обʼєктів: 4, готово.
+Підрахунок обʼєктів: 100% (4/4), готово.
+Дельта компресія з використанням до 16 потоків
+Компресія обʼєктів: 100% (3/3), готово.
+Запис обʼєктів: 100% (3/3), 412 байтів | 412.00 КіБ/с, готово.
+Всього 3 (дельта 1), повторно використано 0 (дельта 0), повторно використано пакунків 0 (з 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:denys-ko/softwareDevelopmentTechLog.git
+   e0f196e..48c32cd  main -> main
